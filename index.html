@@ -3,163 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Questões FGV - A4 Impressão</title>
+<title>Questões FGV - A4 com Gabarito</title>
 <style>
-@page {
-  size: A4;
-  margin: 12mm 10mm 16mm 10mm;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+@page { size: A4; margin: 12mm 10mm 16mm 10mm; }
+* { box-sizing: border-box; }
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #eef3f8;
-  color: #111;
-  font-size: 13.2px;
-  line-height: 1.35;
+  margin: 0; font-family: Arial, Helvetica, sans-serif;
+  background: #eef3f8; color: #111; font-size: 13.2px; line-height: 1.35;
 }
-
 .page {
-  width: 210mm;
-  min-height: 297mm;
-  margin: 0 auto;
-  background: #fff;
-  padding: 12mm 10mm 20mm 10mm;
+  width: 210mm; min-height: 297mm; margin: 0 auto;
+  background: #fff; padding: 12mm 10mm 20mm 10mm;
 }
-
 .capa {
-  text-align: center;
-  background: #f3f8ff;
-  border: 1px solid #cfe0f2;
-  border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 12px;
-  break-inside: avoid;
-  page-break-inside: avoid;
+  text-align: center; background: #f3f8ff; border: 1px solid #cfe0f2;
+  border-radius: 14px; padding: 14px; margin-bottom: 12px;
+  break-inside: avoid; page-break-inside: avoid;
 }
-
-.capa h1 {
-  margin: 0 0 6px;
-  color: #173f63;
-  font-size: 24px;
-}
-
-.capa p {
-  margin: 4px 0;
-  font-weight: bold;
-  color: #333;
-}
-
+.capa h1 { margin: 0 0 6px; color: #173f63; font-size: 24px; }
+.capa p { margin: 4px 0; font-weight: bold; color: #333; }
 .questao {
-  background: #ffffff;
-  border: 1px solid #d7e2ec;
-  border-left: 7px solid #a9cbe8;
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin: 9px 0;
-  break-inside: avoid;
-  page-break-inside: avoid;
+  background: #fff; border: 1px solid #d7e2ec; border-left: 7px solid #a9cbe8;
+  border-radius: 12px; padding: 10px 12px; margin: 9px 0;
+  break-inside: avoid; page-break-inside: avoid;
 }
-
-.qhead {
-  border-bottom: 1px solid #e6edf5;
-  padding-bottom: 6px;
-  margin-bottom: 8px;
-}
-
+.qhead { border-bottom: 1px solid #e6edf5; padding-bottom: 6px; margin-bottom: 8px; }
 .qnum {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: #e8f4ff;
-  border: 1px solid #c9dff2;
-  color: #123d61;
-  font-weight: 800;
-  font-size: 14px;
-  margin-bottom: 6px;
+  display: inline-block; padding: 4px 10px; border-radius: 20px;
+  background: #e8f4ff; border: 1px solid #c9dff2; color: #123d61;
+  font-weight: 800; font-size: 14px; margin-bottom: 6px;
 }
-
-.origem {
-  font-weight: 700;
-  color: #333;
-  font-size: 12.8px;
+.origem { font-weight: 700; color: #333; font-size: 12.8px; }
+.texto { font-size: 13.2px; color: #111; }
+.gabarito {
+  margin-top: 18px; padding: 14px; border: 1px solid #cfe0f2;
+  background: #f8fbff; border-radius: 14px; break-inside: avoid; page-break-inside: avoid;
 }
-
-.texto {
-  font-size: 13.2px;
-  color: #111;
-}
-
-.print-box {
-  text-align: center;
-  margin: 24px 0 8px;
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
+.gabarito h2 { text-align: center; margin: 0 0 12px; color: #173f63; font-size: 22px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border: 1px solid #d7e2ec; padding: 7px; text-align: center; }
+th { background: #e8f4ff; color: #123d61; }
+td:nth-child(2) { font-weight: 800; font-size: 16px; }
+.print-box { text-align: center; margin: 24px 0 8px; break-inside: avoid; page-break-inside: avoid; }
 button {
-  background: #1e5d8f;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 14px 24px;
-  font-size: 17px;
-  font-weight: 800;
-  cursor: pointer;
+  background: #1e5d8f; color: white; border: none; border-radius: 12px;
+  padding: 14px 24px; font-size: 17px; font-weight: 800; cursor: pointer;
 }
-
 .rodape {
-  position: fixed;
-  bottom: 5mm;
-  left: 10mm;
-  right: 10mm;
-  text-align: center;
-  font-size: 10.5px;
-  color: #333;
-  background: #fff;
-  border-top: 1px solid #dce5ee;
-  padding-top: 4px;
+  position: fixed; bottom: 5mm; left: 10mm; right: 10mm; text-align: center;
+  font-size: 10.5px; color: #333; background: #fff;
+  border-top: 1px solid #dce5ee; padding-top: 4px;
 }
-
 @media print {
-  body {
-    background: white;
-    font-size: 12.4px;
-  }
-  .page {
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    padding: 0 0 10mm 0;
-  }
-  .print-box {
-    display: none;
-  }
-  .questao {
-    margin: 7px 0;
-    padding: 8px 10px;
-  }
-  .texto {
-    font-size: 12.4px;
-  }
-  .capa {
-    margin-bottom: 8px;
-    padding: 10px;
-  }
-  .capa h1 {
-    font-size: 20px;
-  }
+  body { background: white; font-size: 12.4px; }
+  .page { width: auto; min-height: auto; margin: 0; padding: 0 0 10mm 0; }
+  .print-box { display: none; }
+  .questao { margin: 7px 0; padding: 8px 10px; }
+  .texto { font-size: 12.4px; }
+  .capa { margin-bottom: 8px; padding: 10px; }
+  .capa h1 { font-size: 20px; }
 }
-
 @media screen and (max-width: 900px) {
-  .page {
-    width: 100%;
-    padding: 16px 12px 70px;
-  }
+  .page { width: 100%; padding: 16px 12px 70px; }
 }
 </style>
 </head>
@@ -169,15 +74,15 @@ button {
     <h1>QUESTÕES FGV — BALANÇO PATRIMONIAL</h1>
     <p>Formato A4 • Cores claras • Pronto para impressão</p>
     <p>Questões renumeradas a partir da Questão 01</p>
+    <p>Gabarito oficial ao final</p>
   </section>
-
   
 <section class="questao">
   <div class="qhead">
     <span class="qnum">QUESTÃO 01</span>
     <div class="origem">FGV - Ana CI (Pref Canaã Carajás)/Pref Canaã Carajás/2025</div>
   </div>
-  <div class="texto">Em 31/12/2024, uma entidade apresentava os seguintes dados em seu Balanço Patrimonial, referentes a ativos e passivos: Adiantamento a sócio (90 dias): R$10.000; Disponibilidades: R$20.000; Receita antecipada (60 dias): R$30.000; Clientes (180 dias): R$40.000; Salários a pagar (15 dias): R$50.000; Participação em empresas coligadas: R$60.000. <br>Assinale a opção que indica o ativo circulante da entidade em 31/12/2024.<br>a)  R$60.000<br>b)  R$70.000<br>c)  R$90.000<br>d)  R$100.000<br>e)  R$130.000<br>Gabarito: A</div>
+  <div class="texto">Em 31/12/2024, uma entidade apresentava os seguintes dados em seu Balanço Patrimonial, referentes a ativos e passivos: Adiantamento a sócio (90 dias): R$10.000; Disponibilidades: R$20.000; Receita antecipada (60 dias): R$30.000; Clientes (180 dias): R$40.000; Salários a pagar (15 dias): R$50.000; Participação em empresas coligadas: R$60.000. <br>Assinale a opção que indica o ativo circulante da entidade em 31/12/2024.<br>a)  R$60.000<br>b)  R$70.000<br>c)  R$90.000<br>d)  R$100.000<br>e)  R$130.000</div>
 </section>
 
 
@@ -186,7 +91,7 @@ button {
     <span class="qnum">QUESTÃO 02</span>
     <div class="origem">FGV - AJ TRT24/TRT 24/Administrativa/Contabilidade/2025</div>
   </div>
-  <div class="texto">Assinale a opção que indica uma conta de natureza devedora.<br>a)  Depreciação acumulada.<br>b)  Provisão para contingências.<br>c)  Receita recebida antecipadamente.<br>d)  Gastos na emissão de valores patrimoniais.<br>e)  Perdas estimadas com crédito de liquidação duvidosa.<br>Gabarito: D</div>
+  <div class="texto">Assinale a opção que indica uma conta de natureza devedora.<br>a)  Depreciação acumulada.<br>b)  Provisão para contingências.<br>c)  Receita recebida antecipadamente.<br>d)  Gastos na emissão de valores patrimoniais.<br>e)  Perdas estimadas com crédito de liquidação duvidosa.</div>
 </section>
 
 
@@ -195,7 +100,7 @@ button {
     <span class="qnum">QUESTÃO 03</span>
     <div class="origem">FGV - AF (SEFAZ PR)/SEFAZ PR/2025</div>
   </div>
-  <div class="texto">Ao realizar uma auditoria nas demonstrações contábeis da sociedade empresária Alpha Ltda, os auditores fiscais observaram que o passivo circulante, no Balanço Patrimonial, apresentava um registro de R$ 500.000,00, referente a direitos da sociedade empresária, a serem recebidos após o término do exercício seguinte. <br>Sobre o referido registro, considerando as informações apresentadas, assinale a afirmativa correta.<br>a)  Está incorreta e resultará em superavaliação do ativo.<br>b)  Está correto e não refletem nos valores de impostos a recolher.<br>c)  Está incorreta, pois os valores deveriam ter sido registrados no ativo circulante.<br>d)  Está correta e seu registro não provoca alterações no patrimônio líquido.<br>e)  Está incorreta, pois os valores deveriam ter sido registrados no ativo não circulante.<br>Gabarito: E</div>
+  <div class="texto">Ao realizar uma auditoria nas demonstrações contábeis da sociedade empresária Alpha Ltda, os auditores fiscais observaram que o passivo circulante, no Balanço Patrimonial, apresentava um registro de R$ 500.000,00, referente a direitos da sociedade empresária, a serem recebidos após o término do exercício seguinte. <br>Sobre o referido registro, considerando as informações apresentadas, assinale a afirmativa correta.<br>a)  Está incorreta e resultará em superavaliação do ativo.<br>b)  Está correto e não refletem nos valores de impostos a recolher.<br>c)  Está incorreta, pois os valores deveriam ter sido registrados no ativo circulante.<br>d)  Está correta e seu registro não provoca alterações no patrimônio líquido.<br>e)  Está incorreta, pois os valores deveriam ter sido registrados no ativo não circulante.</div>
 </section>
 
 
@@ -204,7 +109,7 @@ button {
     <span class="qnum">QUESTÃO 04</span>
     <div class="origem">FGV - TDP (DPE RO)/DPE RO/Técnico em Contabilidade/2025</div>
   </div>
-  <div class="texto">Em 01/10/2024, uma loja de vinhos adquiriu 30 garrafas de vinho para revenda por R$ 3.000. A loja estimava vender 5 garrafas em novembro, 12 em dezembro e o restante no primeiro semestre de 2025.<br>  <br>Na data da compra, o estoque foi contabilizado no balanço patrimonial do seguinte modo:<br>a)  Ativo Circulante: R$ 3.000.<br>b)  Ativo Realizável a Longo Prazo: R$ 3.000.<br>c)  Ativo Circulante: R$ 1.700 e Investimentos: R$ 1.300.<br>d)  Ativo Circulante: R$ 1.700 e Ativo Realizável a Longo Prazo: R$ 1.300.<br>e)  Ativo Circulante: R$ 500 e Ativo Realizável a Longo Prazo: R$ 2.500.<br>Gabarito: A</div>
+  <div class="texto">Em 01/10/2024, uma loja de vinhos adquiriu 30 garrafas de vinho para revenda por R$ 3.000. A loja estimava vender 5 garrafas em novembro, 12 em dezembro e o restante no primeiro semestre de 2025.<br>  <br>Na data da compra, o estoque foi contabilizado no balanço patrimonial do seguinte modo:<br>a)  Ativo Circulante: R$ 3.000.<br>b)  Ativo Realizável a Longo Prazo: R$ 3.000.<br>c)  Ativo Circulante: R$ 1.700 e Investimentos: R$ 1.300.<br>d)  Ativo Circulante: R$ 1.700 e Ativo Realizável a Longo Prazo: R$ 1.300.<br>e)  Ativo Circulante: R$ 500 e Ativo Realizável a Longo Prazo: R$ 2.500.</div>
 </section>
 
 
@@ -213,7 +118,7 @@ button {
     <span class="qnum">QUESTÃO 05</span>
     <div class="origem">FGV - TDP (DPE RO)/DPE RO/Técnico em Contabilidade/2025</div>
   </div>
-  <div class="texto">Em 30/11/2024, uma sociedade empresária contraiu um empréstimo de R$ 500.000 com seu único sócio. Foi acordado entre eles que a sociedade empresária pagaria, integralmente, o montante em 30/04/2025.<br>Em 30/11/2024, o aumento em caixa teve como contrapartida uma conta em<br>a)  patrimônio líquido.<br>b)  passivo circulante.<br>c)  passivo não circulante.<br>d)  despesas financeiras.<br>e)  despesas operacionais.<br>Gabarito: B</div>
+  <div class="texto">Em 30/11/2024, uma sociedade empresária contraiu um empréstimo de R$ 500.000 com seu único sócio. Foi acordado entre eles que a sociedade empresária pagaria, integralmente, o montante em 30/04/2025.<br>Em 30/11/2024, o aumento em caixa teve como contrapartida uma conta em<br>a)  patrimônio líquido.<br>b)  passivo circulante.<br>c)  passivo não circulante.<br>d)  despesas financeiras.<br>e)  despesas operacionais.</div>
 </section>
 
 
@@ -222,7 +127,7 @@ button {
     <span class="qnum">QUESTÃO 06</span>
     <div class="origem">FGV - TDP (DPE RO)/DPE RO/Técnico em Contabilidade/2025</div>
   </div>
-  <div class="texto">Em 31/12/2024, a Cia Gama apresentava os seguintes saldos em seu balanço patrimonial: Disponibilidades: R$ 200.000 e Capital Social: R$ 200.000.<br>Em janeiro de 2025, os sócios da Cia Gama integralizaram capital social por meio de R$ 50.000 em dinheiro. A empresa elaborou as seguintes demonstrações contábeis:<br>I. Balanço Patrimonial<br>II. Demonstração do Resultado do Exercício<br>III. Demonstração das Mutações do Patrimônio Líquido<br>Assinale a opção que indica as demonstrações contábeis que foram impactadas pela integralização de capital social:<br>a)  I, apenas.<br>b)  I e II, apenas.<br>c)  I e III, apenas.<br>d)  II e III, apenas.<br>e)  I, II e III.<br>Gabarito: C</div>
+  <div class="texto">Em 31/12/2024, a Cia Gama apresentava os seguintes saldos em seu balanço patrimonial: Disponibilidades: R$ 200.000 e Capital Social: R$ 200.000.<br>Em janeiro de 2025, os sócios da Cia Gama integralizaram capital social por meio de R$ 50.000 em dinheiro. A empresa elaborou as seguintes demonstrações contábeis:<br>I. Balanço Patrimonial<br>II. Demonstração do Resultado do Exercício<br>III. Demonstração das Mutações do Patrimônio Líquido<br>Assinale a opção que indica as demonstrações contábeis que foram impactadas pela integralização de capital social:<br>a)  I, apenas.<br>b)  I e II, apenas.<br>c)  I e III, apenas.<br>d)  II e III, apenas.<br>e)  I, II e III.</div>
 </section>
 
 
@@ -231,7 +136,7 @@ button {
     <span class="qnum">QUESTÃO 07</span>
     <div class="origem">FGV - Ana GM (Pref SJC)/Pref SJC/Ciências Contábeis/2025</div>
   </div>
-  <div class="texto">Uma sociedade empresária aluga salões para eventos de final de ano.<br>No primeiro semestre de 2025, a sociedade empresária recebeu R$ 40.000,00 a título de adiantamento de clientes interessados em eventos que irão acontecer em dezembro do mesmo ano. Ainda, a sociedade empresária pagou R$ 15.000,00 a funcionários terceirizados que irão trabalhar nestes eventos.<br>O passivo da sociedade empresária no balanço patrimonial semestral, em 30/06/2025 é<br>a)  zero.<br>b)  R$ 15.000,00.<br>c)  R$ 25.000,00.<br>d)  R$ 40.000,00.<br>e)  R$ 55.000,00.<br>Gabarito: D</div>
+  <div class="texto">Uma sociedade empresária aluga salões para eventos de final de ano.<br>No primeiro semestre de 2025, a sociedade empresária recebeu R$ 40.000,00 a título de adiantamento de clientes interessados em eventos que irão acontecer em dezembro do mesmo ano. Ainda, a sociedade empresária pagou R$ 15.000,00 a funcionários terceirizados que irão trabalhar nestes eventos.<br>O passivo da sociedade empresária no balanço patrimonial semestral, em 30/06/2025 é<br>a)  zero.<br>b)  R$ 15.000,00.<br>c)  R$ 25.000,00.<br>d)  R$ 40.000,00.<br>e)  R$ 55.000,00.</div>
 </section>
 
 
@@ -240,7 +145,7 @@ button {
     <span class="qnum">QUESTÃO 08</span>
     <div class="origem">FGV - Bach (CFC)/CFC/2º Exame de Suficiência/2025</div>
   </div>
-  <div class="texto">Uma sociedade empresária presta serviços de perícia a terceiros. Em junho de 2024, aconteceram os seguintes fatos:<br>• Compra de material de escritório para pagamento em 60 dias: R$ 5.000,00;<br>• Recebimento antecipado pelos serviços que serão prestados no segundo semestre: R$ 10.000,00;<br>• Reconhecimento do salário de seus empregados, para pagamento em 5 de julho: R$ 12.000,00.<br>Em junho de 2024, o passivo da sociedade empresária aumentou em<br>a)  R$ 15.000,00.<br>b)  R$ 17.000,00.<br>c)  R$ 22.000,00.<br>d)  R$ 27.000,00.<br>Gabarito: D</div>
+  <div class="texto">Uma sociedade empresária presta serviços de perícia a terceiros. Em junho de 2024, aconteceram os seguintes fatos:<br>• Compra de material de escritório para pagamento em 60 dias: R$ 5.000,00;<br>• Recebimento antecipado pelos serviços que serão prestados no segundo semestre: R$ 10.000,00;<br>• Reconhecimento do salário de seus empregados, para pagamento em 5 de julho: R$ 12.000,00.<br>Em junho de 2024, o passivo da sociedade empresária aumentou em<br>a)  R$ 15.000,00.<br>b)  R$ 17.000,00.<br>c)  R$ 22.000,00.<br>d)  R$ 27.000,00.</div>
 </section>
 
 
@@ -249,7 +154,7 @@ button {
     <span class="qnum">QUESTÃO 09</span>
     <div class="origem">FGV - Ana GM (Pref SJC)/Pref SJC/Ciências Contábeis/2024</div>
   </div>
-  <div class="texto">Em 2022, os sócios de uma empresa aumentaram o capital social por meio da integralização de um terreno, que era avaliado em R$50.000.<br>  <br>No ano seguinte, a empresa vendeu o terreno para terceiros, a prazo, por R$50.000, sem auferir lucro ou prejuízo.<br>  <br>Assinale a opção que indica as variações nos saldos dos elementos patrimoniais, na data da venda.<br>a)  Não há variação nos saldos.<br>b)  Aumento no passivo; diminuição no ativo.<br>c)  Aumento no passivo; diminuição no patrimônio líquido.<br>d)  Diminuição no ativo; aumento no patrimônio líquido.<br>e)  Diminuição no ativo; diminuição no patrimônio líquido.<br>Gabarito: A</div>
+  <div class="texto">Em 2022, os sócios de uma empresa aumentaram o capital social por meio da integralização de um terreno, que era avaliado em R$50.000.<br>  <br>No ano seguinte, a empresa vendeu o terreno para terceiros, a prazo, por R$50.000, sem auferir lucro ou prejuízo.<br>  <br>Assinale a opção que indica as variações nos saldos dos elementos patrimoniais, na data da venda.<br>a)  Não há variação nos saldos.<br>b)  Aumento no passivo; diminuição no ativo.<br>c)  Aumento no passivo; diminuição no patrimônio líquido.<br>d)  Diminuição no ativo; aumento no patrimônio líquido.<br>e)  Diminuição no ativo; diminuição no patrimônio líquido.</div>
 </section>
 
 
@@ -258,7 +163,7 @@ button {
     <span class="qnum">QUESTÃO 10</span>
     <div class="origem">FGV - Ana GM (Pref SJC)/Pref SJC/Ciências Contábeis/2024</div>
   </div>
-  <div class="texto">A Cia Contábil presta serviços de consultoria. Ela tem participação permanente na Cia Decoração, classificando-a como coligada.<br>Em 30/12/2022, a Cia Contábil emprestou à Cia Decoração R$50.000 para recebimento em 31/10/2023.<br>Assinale a opção que indica, respectivamente, a contabilização da participação na Cia Decoração e do empréstimo realizado a ela, no balanço patrimonial da Cia Contábil, em 31/12/2022.<br>a)  Investimentos, Investimentos.<br>b)  Investimentos, Ativo Circulante.<br>c)  Ativo Imobilizado, Ativo Circulante.<br>d)  Investimentos, Ativo Realizável a Longo Prazo.<br>e)  Ativo Realizável a Longo Prazo, Ativo Realizável a Longo Prazo.<br>Gabarito: D</div>
+  <div class="texto">A Cia Contábil presta serviços de consultoria. Ela tem participação permanente na Cia Decoração, classificando-a como coligada.<br>Em 30/12/2022, a Cia Contábil emprestou à Cia Decoração R$50.000 para recebimento em 31/10/2023.<br>Assinale a opção que indica, respectivamente, a contabilização da participação na Cia Decoração e do empréstimo realizado a ela, no balanço patrimonial da Cia Contábil, em 31/12/2022.<br>a)  Investimentos, Investimentos.<br>b)  Investimentos, Ativo Circulante.<br>c)  Ativo Imobilizado, Ativo Circulante.<br>d)  Investimentos, Ativo Realizável a Longo Prazo.<br>e)  Ativo Realizável a Longo Prazo, Ativo Realizável a Longo Prazo.</div>
 </section>
 
 
@@ -267,7 +172,7 @@ button {
     <span class="qnum">QUESTÃO 11</span>
     <div class="origem">FGV - Ana Leg III (ALESC)/ALESC/Contador/2024</div>
   </div>
-  <div class="texto">Uma papelaria incorreu nos seguintes gastos em janeiro de 2024:<br>  <br>Energia elétrica:.................................................................R$5.000;<br>Depreciação dos ativos imobilizados:..............................R$20.000;<br>Salários dos empregados:................................................R$30.000;<br>Custo da mercadoria vendida no período: ......................R$50.000.<br>Assinale a opção que indica o montante reconhecido como despesa de forma ampla nesse mês.<br>a)  R$20.000.<br>b)  R$50.000.<br>c)  R$70.000.<br>d)  R$75.000.<br>e)  R$105.000.<br>Gabarito: E</div>
+  <div class="texto">Uma papelaria incorreu nos seguintes gastos em janeiro de 2024:<br>  <br>Energia elétrica:.................................................................R$5.000;<br>Depreciação dos ativos imobilizados:..............................R$20.000;<br>Salários dos empregados:................................................R$30.000;<br>Custo da mercadoria vendida no período: ......................R$50.000.<br>Assinale a opção que indica o montante reconhecido como despesa de forma ampla nesse mês.<br>a)  R$20.000.<br>b)  R$50.000.<br>c)  R$70.000.<br>d)  R$75.000.<br>e)  R$105.000.</div>
 </section>
 
 
@@ -276,7 +181,7 @@ button {
     <span class="qnum">QUESTÃO 12</span>
     <div class="origem">FGV - Tec Leg (ALEP)/ALEP/Técnico em Contabilidade/2024</div>
   </div>
-  <div class="texto">Em 31/12/2023, os seguintes saldos eram apresentados no balanço patrimonial de uma instituição de ensino:<br>  <br>Salários a pagar: ............................................................... R$40.000;<br>Aluguel antecipado: ......................................................... R$60.000;<br>Empréstimos obtidos: ...................................................... R$80.000;<br>Móveis e computadores: ............................................... R$200.000;<br>Disponibilidades: ........................................................... R$400.000.<br>Assinale a opção que indica o saldo do patrimônio líquido da instituição em 31/12/2023.<br>a)  R$420.000.<br>b)  R$520.000.<br>c)  R$540.000.<br>d)  R$660.000.<br>e)  R$700.000.<br>Gabarito: C</div>
+  <div class="texto">Em 31/12/2023, os seguintes saldos eram apresentados no balanço patrimonial de uma instituição de ensino:<br>  <br>Salários a pagar: ............................................................... R$40.000;<br>Aluguel antecipado: ......................................................... R$60.000;<br>Empréstimos obtidos: ...................................................... R$80.000;<br>Móveis e computadores: ............................................... R$200.000;<br>Disponibilidades: ........................................................... R$400.000.<br>Assinale a opção que indica o saldo do patrimônio líquido da instituição em 31/12/2023.<br>a)  R$420.000.<br>b)  R$520.000.<br>c)  R$540.000.<br>d)  R$660.000.<br>e)  R$700.000.</div>
 </section>
 
 
@@ -285,7 +190,7 @@ button {
     <span class="qnum">QUESTÃO 13</span>
     <div class="origem">FGV - Cont (Pref Caraguatatuba)/Pref Caraguatatuba/2024</div>
   </div>
-  <div class="texto">Em 31/12/2022, uma sociedade empresária apresentava as seguintes contas em seus ativos.<br>•	Contas a receber de clientes: R$50.000<br>•	Contas a receber de partes relacionadas, decorrentes de transações operacionais: R$45.000.<br>•	Contas a receber de partes relacionadas, não decorrentes de transações operacionais: R$30.000.<br>Os três recebimentos estavam previstos para março de 2023.<br>No Balanço Patrimonial da sociedade empresária, os saldos do ativo circulante e do ativo realizável a longo prazo, em 31/12/2022, eram, respectivamente, de<br>a)  Zero e R$125.000.<br>b)  R$50.000 e R$75.000.<br>c)  R$80.000 e R$45.000.<br>d)  R$95.000 e R$30.000.<br>e)  R$125.000 e zero.<br>Gabarito: D</div>
+  <div class="texto">Em 31/12/2022, uma sociedade empresária apresentava as seguintes contas em seus ativos.<br>•	Contas a receber de clientes: R$50.000<br>•	Contas a receber de partes relacionadas, decorrentes de transações operacionais: R$45.000.<br>•	Contas a receber de partes relacionadas, não decorrentes de transações operacionais: R$30.000.<br>Os três recebimentos estavam previstos para março de 2023.<br>No Balanço Patrimonial da sociedade empresária, os saldos do ativo circulante e do ativo realizável a longo prazo, em 31/12/2022, eram, respectivamente, de<br>a)  Zero e R$125.000.<br>b)  R$50.000 e R$75.000.<br>c)  R$80.000 e R$45.000.<br>d)  R$95.000 e R$30.000.<br>e)  R$125.000 e zero.</div>
 </section>
 
 
@@ -294,7 +199,7 @@ button {
     <span class="qnum">QUESTÃO 14</span>
     <div class="origem">FGV - Cont (Pref Caraguatatuba)/Pref Caraguatatuba/2024</div>
   </div>
-  <div class="texto">Em uma entidade, os passivos podem ser circulantes e não circulantes.<br>De acordo com a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, assinale a opção que indica um critério para que o passivo seja classificado como não circulante.<br>a)  É composto pelos passivos permanentes da entidade.<br>b)  É mantido essencialmente para a finalidade de ser negociado.<br>c)  Deve ser liquidado no período de até doze meses após a data do balanço.<br>d)  Espera-se que seja liquidado em prazo superior ao ciclo operacional normal da entidade.<br>e)  A entidade não tem direito incondicional de diferir a liquidação do passivo durante pelo menos doze meses após a data do balanço.<br>Gabarito: D</div>
+  <div class="texto">Em uma entidade, os passivos podem ser circulantes e não circulantes.<br>De acordo com a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, assinale a opção que indica um critério para que o passivo seja classificado como não circulante.<br>a)  É composto pelos passivos permanentes da entidade.<br>b)  É mantido essencialmente para a finalidade de ser negociado.<br>c)  Deve ser liquidado no período de até doze meses após a data do balanço.<br>d)  Espera-se que seja liquidado em prazo superior ao ciclo operacional normal da entidade.<br>e)  A entidade não tem direito incondicional de diferir a liquidação do passivo durante pelo menos doze meses após a data do balanço.</div>
 </section>
 
 
@@ -303,7 +208,7 @@ button {
     <span class="qnum">QUESTÃO 15</span>
     <div class="origem">FGV - Cont (Pref Caraguatatuba)/Pref Caraguatatuba/2024</div>
   </div>
-  <div class="texto">No balanço patrimonial de uma sociedade empresária, o patrimônio líquido representa<br>a)  as obrigações com terceiros.<br>b)  o valor contábil pertencente aos acionistas ou sócios.<br>c)  os ativos que foram integralizados pelos proprietários.<br>d)  os bens e os direitos com expectativa de retorno futuro.<br>e)  a diferença entre as aplicações e as origens de recursos.<br>Gabarito: B</div>
+  <div class="texto">No balanço patrimonial de uma sociedade empresária, o patrimônio líquido representa<br>a)  as obrigações com terceiros.<br>b)  o valor contábil pertencente aos acionistas ou sócios.<br>c)  os ativos que foram integralizados pelos proprietários.<br>d)  os bens e os direitos com expectativa de retorno futuro.<br>e)  a diferença entre as aplicações e as origens de recursos.</div>
 </section>
 
 
@@ -312,7 +217,7 @@ button {
     <span class="qnum">QUESTÃO 16</span>
     <div class="origem">FGV - Tec (Pref Caraguatatuba)/Pref Caraguatatuba/Contabilidade/2024</div>
   </div>
-  <div class="texto">Em 01/01/2020, uma sociedade empresária obteve um empréstimo bancário de R$18.000, para pagamento em 01/01/2022. Os juros mensais são de R$1.000, pagos semestralmente.<br>Assinale a opção que indica a apresentação do empréstimo no passivo da sociedade empresária, em 01/01/2020.<br>a)  Não circulante: R$42.000.<br>b)  Circulante: R$18.000.<br>c)  Não circulante: R$18.000.<br>d)  Circulante: R$12.000; não circulante: R$30.000.<br>e)  Circulante: R$24.000; não circulante: R$18.000.<br>Gabarito: C</div>
+  <div class="texto">Em 01/01/2020, uma sociedade empresária obteve um empréstimo bancário de R$18.000, para pagamento em 01/01/2022. Os juros mensais são de R$1.000, pagos semestralmente.<br>Assinale a opção que indica a apresentação do empréstimo no passivo da sociedade empresária, em 01/01/2020.<br>a)  Não circulante: R$42.000.<br>b)  Circulante: R$18.000.<br>c)  Não circulante: R$18.000.<br>d)  Circulante: R$12.000; não circulante: R$30.000.<br>e)  Circulante: R$24.000; não circulante: R$18.000.</div>
 </section>
 
 
@@ -321,7 +226,7 @@ button {
     <span class="qnum">QUESTÃO 17</span>
     <div class="origem">FGV - Prof NS (SES MT)/SES MT/Contador/2024</div>
   </div>
-  <div class="texto">Os seguintes saldos são apresentados no balanço patrimonial de uma sociedade empresária, que presta serviços de arquitetura, em 31/12/2023: adiantamentos concedidos a acionistas (90 dias): R$30.000; disponibilidades: R$50.000; empréstimos à sociedade coligada (120 dia): R$70.000; clientes (60 dias): R$80.000; terreno utilizado na atividade fim: R$90.000.<br>Assinale a opção que indica o saldo do ativo realizável a longo prazo da sociedade empresária, em 31/12/2023.<br>a)  Zero.<br>b)  R$30.000.<br>c)  R$50.000.<br>d)  R$100.000.<br>Gabarito: D</div>
+  <div class="texto">Os seguintes saldos são apresentados no balanço patrimonial de uma sociedade empresária, que presta serviços de arquitetura, em 31/12/2023: adiantamentos concedidos a acionistas (90 dias): R$30.000; disponibilidades: R$50.000; empréstimos à sociedade coligada (120 dia): R$70.000; clientes (60 dias): R$80.000; terreno utilizado na atividade fim: R$90.000.<br>Assinale a opção que indica o saldo do ativo realizável a longo prazo da sociedade empresária, em 31/12/2023.<br>a)  Zero.<br>b)  R$30.000.<br>c)  R$50.000.<br>d)  R$100.000.</div>
 </section>
 
 
@@ -330,7 +235,7 @@ button {
     <span class="qnum">QUESTÃO 18</span>
     <div class="origem">FGV - Aud CE (TCE-PA)/TCE PA/Fiscalização/Contabilidade/2024</div>
   </div>
-  <div class="texto">Em 01/07/2022, uma sociedade empresária contraiu um empréstimo de R$180.000 com prazo de três anos. De acordo com o contrato, a sociedade empresária deveria amortizar R$30.000 do empréstimo no penúltimo dia de cada semestre. Além disso, os juros fixos eram de R$5.000, pagos ao final de cada trimestre.<br>No Balanço Patrimonial da sociedade empresária, em 31/12/2022, o empréstimo é apresentado do seguinte modo:<br>a)  Passivo não Circulante: R$105.000.<br>b)  Passivo Circulante: R$30.000; Passivo não Circulante: R$120.000.<br>c)  Passivo Circulante: R$60.000; Passivo não Circulante: R$90.000.<br>d)  Passivo Circulante: R$35.000; Passivo não Circulante: R$140.000.<br>e)  Passivo não Circulante: R$150.000; Passivo Circulante: R$70.000.<br>Gabarito: C</div>
+  <div class="texto">Em 01/07/2022, uma sociedade empresária contraiu um empréstimo de R$180.000 com prazo de três anos. De acordo com o contrato, a sociedade empresária deveria amortizar R$30.000 do empréstimo no penúltimo dia de cada semestre. Além disso, os juros fixos eram de R$5.000, pagos ao final de cada trimestre.<br>No Balanço Patrimonial da sociedade empresária, em 31/12/2022, o empréstimo é apresentado do seguinte modo:<br>a)  Passivo não Circulante: R$105.000.<br>b)  Passivo Circulante: R$30.000; Passivo não Circulante: R$120.000.<br>c)  Passivo Circulante: R$60.000; Passivo não Circulante: R$90.000.<br>d)  Passivo Circulante: R$35.000; Passivo não Circulante: R$140.000.<br>e)  Passivo não Circulante: R$150.000; Passivo Circulante: R$70.000.</div>
 </section>
 
 
@@ -339,7 +244,7 @@ button {
     <span class="qnum">QUESTÃO 19</span>
     <div class="origem">FGV - Bach (CFC)/CFC/1º Exame de Suficiência/2024</div>
   </div>
-  <div class="texto">Conforme a Lei nº 6.404/76, no Balanço Patrimonial, as contas do ativo são apresentadas de acordo com a ordem decrescente de grau de<br>a)  liquidez.<br>b)  relevância.<br>c)  objetividade.<br>d)  valor monetário.<br>Gabarito: A</div>
+  <div class="texto">Conforme a Lei nº 6.404/76, no Balanço Patrimonial, as contas do ativo são apresentadas de acordo com a ordem decrescente de grau de<br>a)  liquidez.<br>b)  relevância.<br>c)  objetividade.<br>d)  valor monetário.</div>
 </section>
 
 
@@ -348,7 +253,7 @@ button {
     <span class="qnum">QUESTÃO 20</span>
     <div class="origem">FGV - Bach (CFC)/CFC/1º Exame de Suficiência/2024</div>
   </div>
-  <div class="texto">Uma farmácia apresentava os seguintes saldos em seu ativo, em 31/12/2023:<br>•	Aplicação financeira com vencimento em 380 dias: R$200.000;<br>•	Clientes com recebimento previsto para 180 dias: R$140.000;<br>•	Disponibilidades: R$50.000;<br>•	Estoque com venda prevista para até 60 dias: R$120.000;<br>•	Imóvel onde funciona a farmácia: R$600.000;<br>•	Móveis e utensílios utilizados em suas lojas: R$ 300.000.<br>O ativo circulante da farmácia em 31/12/2023 foi de<br>a)  R$170.000.<br>b)  R$190.000.<br>c)  R$310.000.<br>d)  R$510.000.<br>Gabarito: C</div>
+  <div class="texto">Uma farmácia apresentava os seguintes saldos em seu ativo, em 31/12/2023:<br>•	Aplicação financeira com vencimento em 380 dias: R$200.000;<br>•	Clientes com recebimento previsto para 180 dias: R$140.000;<br>•	Disponibilidades: R$50.000;<br>•	Estoque com venda prevista para até 60 dias: R$120.000;<br>•	Imóvel onde funciona a farmácia: R$600.000;<br>•	Móveis e utensílios utilizados em suas lojas: R$ 300.000.<br>O ativo circulante da farmácia em 31/12/2023 foi de<br>a)  R$170.000.<br>b)  R$190.000.<br>c)  R$310.000.<br>d)  R$510.000.</div>
 </section>
 
 
@@ -357,7 +262,7 @@ button {
     <span class="qnum">QUESTÃO 21</span>
     <div class="origem">FGV - Bach (CFC)/CFC/1º Exame de Suficiência/2024</div>
   </div>
-  <div class="texto">Em 31/12/2023, a Cia Lua apresentava os seguintes saldos em seu ativo:<br>  <br>Aplicações financeiras com vencimento em 720 dias: ........................	R$70.000;<br>Clientes com previsão de recebimento em 380 dias: ..........................	R$60.000;<br>Disponibilidades: .................................................................................	R$50.000;<br>Estoques com previsão de venda em até 180 dias: .............................	R$40.000;<br>Perdas estimadas com crédito de liquidação duvidosa: ........................	R$6.000;<br>Perdas estimadas com desvalorização de estoque: ...............................	R$8.000.<br>Assinale a opção que indica o saldo do ativo circulante em 31/12/2023.<br>a)  R$76.000.<br>b)  R$82.000.<br>c)  R$90.000.<br>d)  R$136.000.<br>Gabarito: B</div>
+  <div class="texto">Em 31/12/2023, a Cia Lua apresentava os seguintes saldos em seu ativo:<br>  <br>Aplicações financeiras com vencimento em 720 dias: ........................	R$70.000;<br>Clientes com previsão de recebimento em 380 dias: ..........................	R$60.000;<br>Disponibilidades: .................................................................................	R$50.000;<br>Estoques com previsão de venda em até 180 dias: .............................	R$40.000;<br>Perdas estimadas com crédito de liquidação duvidosa: ........................	R$6.000;<br>Perdas estimadas com desvalorização de estoque: ...............................	R$8.000.<br>Assinale a opção que indica o saldo do ativo circulante em 31/12/2023.<br>a)  R$76.000.<br>b)  R$82.000.<br>c)  R$90.000.<br>d)  R$136.000.</div>
 </section>
 
 
@@ -366,7 +271,7 @@ button {
     <span class="qnum">QUESTÃO 22</span>
     <div class="origem">FGV - Bach (CFC)/CFC/1º Exame de Suficiência/2024</div>
   </div>
-  <div class="texto">Em relação aos ativos, no Balanço Patrimonial de uma entidade, assinale a afirmativa correta, de acordo com a Lei nº 6.404/76 e alterações.<br>a) No intangível estão as participações permanentes em outras sociedades e os direitos de qualquer natureza, não classificáveis no ativo circulante.<br>b) No imobilizado estão os direitos que tenham por objeto bens incorpóreos destinados à manutenção da companhia ou exercidos com essa finalidade.<br>c) Em investimentos estão os direitos que tenham por objeto bens corpóreos destinados à manutenção das atividades da entidade ou exercidos com essa finalidade.<br>d) No circulante estão as disponibilidades, os direitos realizáveis no curso do exercício social subsequente e as aplicações de recursos em despesas do exercício seguinte.<br>Gabarito: D</div>
+  <div class="texto">Em relação aos ativos, no Balanço Patrimonial de uma entidade, assinale a afirmativa correta, de acordo com a Lei nº 6.404/76 e alterações.<br>a) No intangível estão as participações permanentes em outras sociedades e os direitos de qualquer natureza, não classificáveis no ativo circulante.<br>b) No imobilizado estão os direitos que tenham por objeto bens incorpóreos destinados à manutenção da companhia ou exercidos com essa finalidade.<br>c) Em investimentos estão os direitos que tenham por objeto bens corpóreos destinados à manutenção das atividades da entidade ou exercidos com essa finalidade.<br>d) No circulante estão as disponibilidades, os direitos realizáveis no curso do exercício social subsequente e as aplicações de recursos em despesas do exercício seguinte.</div>
 </section>
 
 
@@ -375,7 +280,7 @@ button {
     <span class="qnum">QUESTÃO 23</span>
     <div class="origem">FGV - Ana Prev (MACAEPREV)/MACAEPREV/Contabilidade/2024</div>
   </div>
-  <div class="texto">Em relação ao balanço patrimonial de uma entidade, representa(m) aplicações de recursos:<br>a)  ativo, apenas.<br>b)  passivo, apenas.<br>c)  patrimônio líquido, apenas.<br>d)  passivo e patrimônio líquido.<br>e)  ativo e patrimônio líquido.<br>Gabarito: A</div>
+  <div class="texto">Em relação ao balanço patrimonial de uma entidade, representa(m) aplicações de recursos:<br>a)  ativo, apenas.<br>b)  passivo, apenas.<br>c)  patrimônio líquido, apenas.<br>d)  passivo e patrimônio líquido.<br>e)  ativo e patrimônio líquido.</div>
 </section>
 
 
@@ -384,7 +289,7 @@ button {
     <span class="qnum">QUESTÃO 24</span>
     <div class="origem">FGV - Ana Prev (MACAEPREV)/MACAEPREV/Contabilidade/2024</div>
   </div>
-  <div class="texto">Uma sociedade empresária apresentava os seguintes saldos em seu balanço patrimonial em 01/12/2023: Disponibilidades: R$100.000; Patrimônio Líquido: R$100.000.<br>Em dezembro de 2023, aconteceram os seguintes fatos:<br>01/12: Compra de R$5.000 em estoque, para pagamento em 10/12/2024.<br>10/12: Recebimento de R$50.000 por empréstimo bancário, para pagamento em 05/12/2025.<br>15/12: Compra de veículo para ser utilizado no negócio da empresa por R$80.000, para pagamento em 18/06/2024.<br>20/12: Recebimento de R$15.000 de clientes, por serviço que será realizado em 25/03/2024.<br>27/12: Adiantamento de R$25.000 obtido de sociedade controlada, para pagamento em 02/07/2024.<br>31/12: Reconhecimento da despesa de salários de R$12.000, para pagamento em 10/01/2024.<br>Assinale a opção que indica o passivo circulante da sociedade empresária em 31/12/2023, em seu balanço patrimonial.<br>a)  R$107.000<br>b)  R$112.000<br>c)  R$122.000<br>d)  R$132.000<br>e)  R$137.000<br>Gabarito: E</div>
+  <div class="texto">Uma sociedade empresária apresentava os seguintes saldos em seu balanço patrimonial em 01/12/2023: Disponibilidades: R$100.000; Patrimônio Líquido: R$100.000.<br>Em dezembro de 2023, aconteceram os seguintes fatos:<br>01/12: Compra de R$5.000 em estoque, para pagamento em 10/12/2024.<br>10/12: Recebimento de R$50.000 por empréstimo bancário, para pagamento em 05/12/2025.<br>15/12: Compra de veículo para ser utilizado no negócio da empresa por R$80.000, para pagamento em 18/06/2024.<br>20/12: Recebimento de R$15.000 de clientes, por serviço que será realizado em 25/03/2024.<br>27/12: Adiantamento de R$25.000 obtido de sociedade controlada, para pagamento em 02/07/2024.<br>31/12: Reconhecimento da despesa de salários de R$12.000, para pagamento em 10/01/2024.<br>Assinale a opção que indica o passivo circulante da sociedade empresária em 31/12/2023, em seu balanço patrimonial.<br>a)  R$107.000<br>b)  R$112.000<br>c)  R$122.000<br>d)  R$132.000<br>e)  R$137.000</div>
 </section>
 
 
@@ -393,7 +298,7 @@ button {
     <span class="qnum">QUESTÃO 25</span>
     <div class="origem">FGV - Cont (Pref Macaé)/Pref Macaé/2024</div>
   </div>
-  <div class="texto">Em 31/12/2023, uma companhia aérea apresentava os seguintes saldos em seu balanço patrimonial:<br>• Ativo Total: .............................................................. R$800.000;<br>• Patrimônio Líquido: ................................................. R$800.000.<br>Em janeiro de 2024, a companhia aérea vendeu 20 passagens Rio de Janeiro-Miami, cada uma por R$4.000. O valor foi recebido integralmente no próprio mês e a viagem foi marcada para o início de abril. Em março, 5 passageiros pagaram uma multa individual e não reembolsável de R$800, decorrente do cancelamento da reserva original. A viagem desses passageiros foi remarcada para maio.<br>Em 30/04/2024, o passivo da companhia aérea era de<br>a)  zero.<br>b)  R$4.000.<br>c)  R$16.000.<br>d)  R$20.000.<br>e)  R$24.000.<br>Gabarito: D</div>
+  <div class="texto">Em 31/12/2023, uma companhia aérea apresentava os seguintes saldos em seu balanço patrimonial:<br>• Ativo Total: .............................................................. R$800.000;<br>• Patrimônio Líquido: ................................................. R$800.000.<br>Em janeiro de 2024, a companhia aérea vendeu 20 passagens Rio de Janeiro-Miami, cada uma por R$4.000. O valor foi recebido integralmente no próprio mês e a viagem foi marcada para o início de abril. Em março, 5 passageiros pagaram uma multa individual e não reembolsável de R$800, decorrente do cancelamento da reserva original. A viagem desses passageiros foi remarcada para maio.<br>Em 30/04/2024, o passivo da companhia aérea era de<br>a)  zero.<br>b)  R$4.000.<br>c)  R$16.000.<br>d)  R$20.000.<br>e)  R$24.000.</div>
 </section>
 
 
@@ -402,7 +307,7 @@ button {
     <span class="qnum">QUESTÃO 26</span>
     <div class="origem">FGV - Bach (CFC)/CFC/2º Exame de Suficiência/2024</div>
   </div>
-  <div class="texto">Em 01/05/2022, uma loja de roupas pagou R$ 180.000 a terceiros, referentes ao aluguel antecipado de 3 anos do imóvel onde funcionava a sua loja, contados a partir da data de pagamento.<br>Em 31/12/2023, a despesa antecipada de aluguel no ativo realizável a longo prazo da loja era<br>a)  zero.<br>b)  R$ 20.000.<br>c)  R$ 60.000.<br>d)  R$ 80.000.<br>Gabarito: B</div>
+  <div class="texto">Em 01/05/2022, uma loja de roupas pagou R$ 180.000 a terceiros, referentes ao aluguel antecipado de 3 anos do imóvel onde funcionava a sua loja, contados a partir da data de pagamento.<br>Em 31/12/2023, a despesa antecipada de aluguel no ativo realizável a longo prazo da loja era<br>a)  zero.<br>b)  R$ 20.000.<br>c)  R$ 60.000.<br>d)  R$ 80.000.</div>
 </section>
 
 
@@ -411,7 +316,7 @@ button {
     <span class="qnum">QUESTÃO 27</span>
     <div class="origem">FGV - AFRE MG/SEF MG/Auditoria e Fiscalização/2023</div>
   </div>
-  <div class="texto">De acordo com inclusão feita pela Lei nº 11.638/07 na Lei nº 6.404/64, assinale a opção que indica a classificação no ativo intangível.<br>a)  Despesas pré-operacionais e gastos de reestruturação que contribuirão, efetivamente, para o aumento do resultado de mais de um exercício social.<br>b)  Direitos que tenham por objeto bens incorpóreos destinados à manutenção da companhia ou exercidos com essa finalidade, inclusive o fundo de comércio adquirido.<br>c)  Aplicações de recursos em despesas que contribuirão para a formação do resultado de mais de um exercício social, inclusive os juros pagos ou creditados aos acionistas.<br>d)  Direitos que tenham por objeto bens destinados à manutenção das atividades da companhia e da sociedade empresária, ou exercidos com essa finalidade, inclusive os de propriedade industrial ou comercial.<br>e)  Participações permanentes em outras sociedades e os direitos de qualquer natureza, não classificáveis no ativo circulante, e que não se destinem à manutenção da atividade da companhia ou da sociedade empresária.<br>Gabarito: B</div>
+  <div class="texto">De acordo com inclusão feita pela Lei nº 11.638/07 na Lei nº 6.404/64, assinale a opção que indica a classificação no ativo intangível.<br>a)  Despesas pré-operacionais e gastos de reestruturação que contribuirão, efetivamente, para o aumento do resultado de mais de um exercício social.<br>b)  Direitos que tenham por objeto bens incorpóreos destinados à manutenção da companhia ou exercidos com essa finalidade, inclusive o fundo de comércio adquirido.<br>c)  Aplicações de recursos em despesas que contribuirão para a formação do resultado de mais de um exercício social, inclusive os juros pagos ou creditados aos acionistas.<br>d)  Direitos que tenham por objeto bens destinados à manutenção das atividades da companhia e da sociedade empresária, ou exercidos com essa finalidade, inclusive os de propriedade industrial ou comercial.<br>e)  Participações permanentes em outras sociedades e os direitos de qualquer natureza, não classificáveis no ativo circulante, e que não se destinem à manutenção da atividade da companhia ou da sociedade empresária.</div>
 </section>
 
 
@@ -420,7 +325,7 @@ button {
     <span class="qnum">QUESTÃO 28</span>
     <div class="origem">FGV - Aud Est (CGE SC)/CGE SC/Administração/2023</div>
   </div>
-  <div class="texto">O balanço patrimonial é uma representação do valor contábil de uma organização em uma data específica. Ele tem dois lados: no lado esquerdo, estão os ativos; no lado direito, os passivos e o capital dos acionistas. O balanço patrimonial declara o que a organização possui e como ela é financiada. A definição contábil que fundamenta e descreve o balanço patrimonial é a seguinte:<br><br>Ativos = Passivos + Patrimônio líquido dos acionistas<br>Sobre o balanço patrimonial, analise os itens a seguir:<br>I. Ao analisar um balanço patrimonial, o administrador financeiro deve ter três preocupações em mente: liquidez, dívida versus capital próprio e valor versus custo.<br>II. O ativo circulante apresenta a maior liquidez e inclui o caixa e os ativos que serão convertidos em caixa em até um ano da data do balanço patrimonial.<br>III. O valor contábil do patrimônio líquido dos acionistas diminui quando é adicionada a reserva de lucros.<br>Está correto o que se afirma em<br>a)  I, II e III.<br>b)  I e II, apenas.<br>c)  I e III, apenas.<br>d)  II e III apenas.<br>e)  I, apenas.<br>Gabarito: B</div>
+  <div class="texto">O balanço patrimonial é uma representação do valor contábil de uma organização em uma data específica. Ele tem dois lados: no lado esquerdo, estão os ativos; no lado direito, os passivos e o capital dos acionistas. O balanço patrimonial declara o que a organização possui e como ela é financiada. A definição contábil que fundamenta e descreve o balanço patrimonial é a seguinte:<br><br>Ativos = Passivos + Patrimônio líquido dos acionistas<br>Sobre o balanço patrimonial, analise os itens a seguir:<br>I. Ao analisar um balanço patrimonial, o administrador financeiro deve ter três preocupações em mente: liquidez, dívida versus capital próprio e valor versus custo.<br>II. O ativo circulante apresenta a maior liquidez e inclui o caixa e os ativos que serão convertidos em caixa em até um ano da data do balanço patrimonial.<br>III. O valor contábil do patrimônio líquido dos acionistas diminui quando é adicionada a reserva de lucros.<br>Está correto o que se afirma em<br>a)  I, II e III.<br>b)  I e II, apenas.<br>c)  I e III, apenas.<br>d)  II e III apenas.<br>e)  I, apenas.</div>
 </section>
 
 
@@ -429,7 +334,7 @@ button {
     <span class="qnum">QUESTÃO 29</span>
     <div class="origem">FGV - Aud Est (CGE SC)/CGE SC/Ciências Contábeis/2023</div>
   </div>
-  <div class="texto">A Cia A produz navios e tem ciclo operacional de dezoito meses.<br><br>Já a Cia B produz móveis para encomenda e tem ciclo operacional de dez meses.<br>O prazo para classificação das exigibilidades das Cias A e B, respectivamente, em Passivo Circulante e Passivo não Circulante, considerando que as empresas optam por adotar o prazo do exercício social de acordo com o ciclo operacional, é de<br>a)  doze meses e dez meses.<br>b)  doze meses e doze meses.<br>c)  quinze meses e onze meses.<br>d)  dezoito meses e dez meses.<br>e)  dezoito meses e doze meses.<br>Gabarito: E</div>
+  <div class="texto">A Cia A produz navios e tem ciclo operacional de dezoito meses.<br><br>Já a Cia B produz móveis para encomenda e tem ciclo operacional de dez meses.<br>O prazo para classificação das exigibilidades das Cias A e B, respectivamente, em Passivo Circulante e Passivo não Circulante, considerando que as empresas optam por adotar o prazo do exercício social de acordo com o ciclo operacional, é de<br>a)  doze meses e dez meses.<br>b)  doze meses e doze meses.<br>c)  quinze meses e onze meses.<br>d)  dezoito meses e dez meses.<br>e)  dezoito meses e doze meses.</div>
 </section>
 
 
@@ -438,7 +343,7 @@ button {
     <span class="qnum">QUESTÃO 30</span>
     <div class="origem">FGV - ACE (TCE ES)/TCE ES/Ciências Contábeis/2023</div>
   </div>
-  <div class="texto">Uma empresa comercial está separando seus ativos e passivos circulantes e não circulantes para elaborar o Balanço Patrimonial. O contador, ao verificar os requisitos do CPC 26 (R1) – Apresentação das Demonstrações Contábeis, observou que:<br>a)  os ativos e passivos devem ser apresentados por ordem crescente de liquidez, do menos líquido para o mais líquido;<br>b)  o passivo deve ser classificado como circulante quando for caixa ou equivalente de caixa;<br>c)  os impostos diferidos não devem ser classificados como circulantes;<br>d)  o ativo deve ser classificado como circulante quando for adiantamento de clientes;<br>e)  o passivo deve ser classificado como circulante quando for uma despesa antecipada.<br>Gabarito: C</div>
+  <div class="texto">Uma empresa comercial está separando seus ativos e passivos circulantes e não circulantes para elaborar o Balanço Patrimonial. O contador, ao verificar os requisitos do CPC 26 (R1) – Apresentação das Demonstrações Contábeis, observou que:<br>a)  os ativos e passivos devem ser apresentados por ordem crescente de liquidez, do menos líquido para o mais líquido;<br>b)  o passivo deve ser classificado como circulante quando for caixa ou equivalente de caixa;<br>c)  os impostos diferidos não devem ser classificados como circulantes;<br>d)  o ativo deve ser classificado como circulante quando for adiantamento de clientes;<br>e)  o passivo deve ser classificado como circulante quando for uma despesa antecipada.</div>
 </section>
 
 
@@ -447,7 +352,7 @@ button {
     <span class="qnum">QUESTÃO 31</span>
     <div class="origem">FGV - Ana EF (BANESTES)/BANESTES/Gestão Contábil/2023</div>
   </div>
-  <div class="texto">Em 01/11/X0, uma entidade adquiriu computadores para usar em seus negócios por R$60.000. O valor foi pago em dezembro do mesmo ano. No dia da aquisição, a entidade estimou usar os computadores durante 5 anos e depreciá-los de acordo com o método da linha reta.<br>Assinale a opção que indica as variações nos elementos patrimoniais da entidade em 01/11/X0.<br>a)  Aumento de R$60.000 no ativo e aumento de R$60.000 no passivo.<br>b)  Aumento de R$60.000 no passivo e aumento de R$60.000 no patrimônio líquido.<br>c)  Aumento de R$60.000 no ativo e aumento de R$60.000 no patrimônio líquido.<br>d)  Aumento de R$59.000 no passivo e aumento de R$59.000 no patrimônio líquido.<br>e)  Aumento de R$59.000 no ativo, aumento de R$60.000 no passivo e diminuição de R$1.000 no patrimônio líquido.<br>Gabarito: A</div>
+  <div class="texto">Em 01/11/X0, uma entidade adquiriu computadores para usar em seus negócios por R$60.000. O valor foi pago em dezembro do mesmo ano. No dia da aquisição, a entidade estimou usar os computadores durante 5 anos e depreciá-los de acordo com o método da linha reta.<br>Assinale a opção que indica as variações nos elementos patrimoniais da entidade em 01/11/X0.<br>a)  Aumento de R$60.000 no ativo e aumento de R$60.000 no passivo.<br>b)  Aumento de R$60.000 no passivo e aumento de R$60.000 no patrimônio líquido.<br>c)  Aumento de R$60.000 no ativo e aumento de R$60.000 no patrimônio líquido.<br>d)  Aumento de R$59.000 no passivo e aumento de R$59.000 no patrimônio líquido.<br>e)  Aumento de R$59.000 no ativo, aumento de R$60.000 no passivo e diminuição de R$1.000 no patrimônio líquido.</div>
 </section>
 
 
@@ -456,7 +361,7 @@ button {
     <span class="qnum">QUESTÃO 32</span>
     <div class="origem">FGV - Ana EF (BANESTES)/BANESTES/Gestão Contábil/2023</div>
   </div>
-  <div class="texto">Uma entidade apresentava os seguintes saldos em seu balanço patrimonial em 31/12/X0:<br>Fornecedores com pagamento em 120 dias: R$5.000; Financiamento com pagamento em 720 dias: R$21.000; Empréstimo de sócio com pagamento em 90 dias: R$12.000; Despesas antecipadas com realização em 60 dias: R$8.000.<br>Assinale a opção que indica o saldo do passivo circulante da entidade em 31/12/X0.<br>a)  R$5.000.<br>b)  R$13.000.<br>c)  R$17.000.<br>d)  R$20.000.<br>e)  R$25.000.<br>Gabarito: C</div>
+  <div class="texto">Uma entidade apresentava os seguintes saldos em seu balanço patrimonial em 31/12/X0:<br>Fornecedores com pagamento em 120 dias: R$5.000; Financiamento com pagamento em 720 dias: R$21.000; Empréstimo de sócio com pagamento em 90 dias: R$12.000; Despesas antecipadas com realização em 60 dias: R$8.000.<br>Assinale a opção que indica o saldo do passivo circulante da entidade em 31/12/X0.<br>a)  R$5.000.<br>b)  R$13.000.<br>c)  R$17.000.<br>d)  R$20.000.<br>e)  R$25.000.</div>
 </section>
 
 
@@ -465,7 +370,7 @@ button {
     <span class="qnum">QUESTÃO 33</span>
     <div class="origem">FGV - Ana EF (BANESTES)/BANESTES/Gestão Contábil/2023</div>
   </div>
-  <div class="texto">Em 31/12/X0, uma sociedade empresária apresentava os seguintes saldos em seu balanço patrimonial: Ativo Circulante: R$50.000; Ativo Realizável a Longo Prazo: R$30.000; Ativo Imobilizado: R$80.000; Ativo Intangível: R$20.000; Passivo Circulante: R$25.000; Passivo não Circulante: R$45.000; Patrimônio Líquido: R$110.000.<br>Em relação à situação contábil da sociedade empresária em 31/12/X0, é correto afirmar que<br>a)  os ativos não circulantes são de R$30.000.<br>b)  os imóveis destinados à valorização são de R$80.000.<br>c)  os ativos que podem ser avaliados a valor de mercado são de R$20.000.<br>d)  o saldo das obrigações com terceiros é de R$70.000.<br>e)  o resultado é positivo, ou seja, há reconhecimento de lucro.<br>Gabarito: D</div>
+  <div class="texto">Em 31/12/X0, uma sociedade empresária apresentava os seguintes saldos em seu balanço patrimonial: Ativo Circulante: R$50.000; Ativo Realizável a Longo Prazo: R$30.000; Ativo Imobilizado: R$80.000; Ativo Intangível: R$20.000; Passivo Circulante: R$25.000; Passivo não Circulante: R$45.000; Patrimônio Líquido: R$110.000.<br>Em relação à situação contábil da sociedade empresária em 31/12/X0, é correto afirmar que<br>a)  os ativos não circulantes são de R$30.000.<br>b)  os imóveis destinados à valorização são de R$80.000.<br>c)  os ativos que podem ser avaliados a valor de mercado são de R$20.000.<br>d)  o saldo das obrigações com terceiros é de R$70.000.<br>e)  o resultado é positivo, ou seja, há reconhecimento de lucro.</div>
 </section>
 
 
@@ -474,7 +379,7 @@ button {
     <span class="qnum">QUESTÃO 34</span>
     <div class="origem">FGV - ATR (AGENERSA)/AGENERSA/2023</div>
   </div>
-  <div class="texto">Uma sociedade empresária apresentava os seguintes saldos em 31/12/X0:<br><br>• Disponibilidades: R$10.000;<br>•  Estoques: R$15.000;<br>•  Contas a receber de clientes; R$20.000;<br>•  Terrenos: R$40.000;<br>•  Empréstimos obtidos: R$12.000;<br>•  Fornecedores: R$14.000;<br>•  Salários a pagar: R$7.000.<br><br>Com base nos saldos, assinale a opção que indica o patrimônio líquido da sociedade empresária em 31/12/X0.<br>a)  R$52.000.<br>b)  R$76.000.<br>c)  R$85.000.<br>d)  R$104.000.<br>e)  R$118.000.<br>Gabarito: A</div>
+  <div class="texto">Uma sociedade empresária apresentava os seguintes saldos em 31/12/X0:<br><br>• Disponibilidades: R$10.000;<br>•  Estoques: R$15.000;<br>•  Contas a receber de clientes; R$20.000;<br>•  Terrenos: R$40.000;<br>•  Empréstimos obtidos: R$12.000;<br>•  Fornecedores: R$14.000;<br>•  Salários a pagar: R$7.000.<br><br>Com base nos saldos, assinale a opção que indica o patrimônio líquido da sociedade empresária em 31/12/X0.<br>a)  R$52.000.<br>b)  R$76.000.<br>c)  R$85.000.<br>d)  R$104.000.<br>e)  R$118.000.</div>
 </section>
 
 
@@ -483,7 +388,7 @@ button {
     <span class="qnum">QUESTÃO 35</span>
     <div class="origem">FGV - ATR (AGENERSA)/AGENERSA/2023</div>
   </div>
-  <div class="texto">Assinale a opção que indica um passivo contabilizado no balanço patrimonial de uma entidade.<br>a) Passivo contingente.<br>b) Despesas antecipadas.<br>c) Receitas recebidas antecipadamente.<br>d) Perdas estimadas com desvalorização do estoque.<br>e) Perdas estimadas com crédito de liquidação duvidosa.<br>Gabarito: C</div>
+  <div class="texto">Assinale a opção que indica um passivo contabilizado no balanço patrimonial de uma entidade.<br>a) Passivo contingente.<br>b) Despesas antecipadas.<br>c) Receitas recebidas antecipadamente.<br>d) Perdas estimadas com desvalorização do estoque.<br>e) Perdas estimadas com crédito de liquidação duvidosa.</div>
 </section>
 
 
@@ -492,7 +397,7 @@ button {
     <span class="qnum">QUESTÃO 36</span>
     <div class="origem">FGV - ATR (AGENERSA)/AGENERSA/2023</div>
   </div>
-  <div class="texto">Uma entidade que presta serviços contábeis adquiriu ações integrantes do capital social de outra sociedade, com o intuito de valorização.<br>Em seu balanço patrimonial, essas ações são contabilizadas no ativo como<br>a) circulante.<br>b) intangível.<br>c)  imobilizado.<br>d)  investimento.<br>e) realizável a longo prazo.<br>Gabarito: D</div>
+  <div class="texto">Uma entidade que presta serviços contábeis adquiriu ações integrantes do capital social de outra sociedade, com o intuito de valorização.<br>Em seu balanço patrimonial, essas ações são contabilizadas no ativo como<br>a) circulante.<br>b) intangível.<br>c)  imobilizado.<br>d)  investimento.<br>e) realizável a longo prazo.</div>
 </section>
 
 
@@ -501,7 +406,7 @@ button {
     <span class="qnum">QUESTÃO 37</span>
     <div class="origem">FGV - AJ (TJ AP)/TJ AP/Apoio Especializado/Contador/2024</div>
   </div>
-  <div class="texto">Uma empresa comercial apresentou os seguintes saldos.<br>  <br>Descrição	Saldos (em R$)<br>	Devedor	Credor<br>Caixa e equivalentes de caixa	2.000	 <br>Tributos a pagar (curto prazo)	 	15.000<br>Contas a receber (curto prazo)	10.000	 <br>Estoques	20.000	 <br>Reserva de lucros	 	30.000<br>Capital social	 	100.000<br>Tributos diferidos ativos	7.000	 <br>Ações em tesouraria	25.000	 <br>Outros resultados abrangentes	 	10.000<br>Imobilizado	80.000	 <br>Investimentos em controladas	51.000	 <br>Fornecedores (curto prazo)	 	5.000<br>Empréstimos e Financiamentos (longo prazo)	 	30.000<br>Tributos diferidos passivos	 	5.000<br>  <br>Considerando-se as informações apresentadas, o saldo do:<br>a)  ativo circulante é de R$ 39.000;<br>b)  passivo circulante é de R$ 25.000;<br>c)  passivo não circulante é de R$ 30.000;<br>d)  patrimônio líquido é de R$ 165.000;<br>e)  ativo não circulante é de R$ 138.000.<br>Gabarito: E</div>
+  <div class="texto">Uma empresa comercial apresentou os seguintes saldos.<br>  <br>Descrição	Saldos (em R$)<br>	Devedor	Credor<br>Caixa e equivalentes de caixa	2.000	 <br>Tributos a pagar (curto prazo)	 	15.000<br>Contas a receber (curto prazo)	10.000	 <br>Estoques	20.000	 <br>Reserva de lucros	 	30.000<br>Capital social	 	100.000<br>Tributos diferidos ativos	7.000	 <br>Ações em tesouraria	25.000	 <br>Outros resultados abrangentes	 	10.000<br>Imobilizado	80.000	 <br>Investimentos em controladas	51.000	 <br>Fornecedores (curto prazo)	 	5.000<br>Empréstimos e Financiamentos (longo prazo)	 	30.000<br>Tributos diferidos passivos	 	5.000<br>  <br>Considerando-se as informações apresentadas, o saldo do:<br>a)  ativo circulante é de R$ 39.000;<br>b)  passivo circulante é de R$ 25.000;<br>c)  passivo não circulante é de R$ 30.000;<br>d)  patrimônio líquido é de R$ 165.000;<br>e)  ativo não circulante é de R$ 138.000.</div>
 </section>
 
 
@@ -510,15 +415,57 @@ button {
     <span class="qnum">QUESTÃO 38</span>
     <div class="origem">FGV - ATRFB/SRFB/Geral/2023</div>
   </div>
-  <div class="texto">O balanço patrimonial representa o valor contábil de uma sociedade empresária em um momento específico, como se fosse um retrato da empresa. Ele é composto por dois lados: no esquerdo estão os ativos da empresa; no direito são identificados os passivos e o capital dos acionistas. A definição contábil que fundamenta e descreve o balanço patrimonial é a seguinte:<br>Ativos = Passivos + Patrimônio liquido<br>Considere as informações apresentadas a seguir sobre a sociedade empresária XPTO no ano de 20XX.<br>Empresa XPTO 20XX	 <br>Caixa e equivalentes	150<br>Fornecedores	150<br>Empréstimos	200<br>Ações Ordinárias	100<br>Reservas de Capital	250<br>Contas a receber	600<br>Estoques	250<br>Bens, imóveis, fábricas e equipamentos	1500<br>Dívidas de longo prazo	500<br>Ações preferenciais	200<br>Ativos intangíveis e outros	300<br>Despesas a pagar	50<br>Impostos diferidos	300<br>Reserva de lucros	400<br>Depreciação acumulada	800<br>Ações em tesouraria	150<br>No período apresentado, os valores do Ativo Não-Circulante, do Passivo Circulante e do Patrimônio Líquido são, respectivamente,<br>a)  1000, 400 e 950.<br>b)  2300, 700 e 950.<br>c)  1000, 400 e 800.<br>d)  700, 700 e 950.<br>e)  700, 700 e 800.<br>Gabarito: C</div>
+  <div class="texto">O balanço patrimonial representa o valor contábil de uma sociedade empresária em um momento específico, como se fosse um retrato da empresa. Ele é composto por dois lados: no esquerdo estão os ativos da empresa; no direito são identificados os passivos e o capital dos acionistas. A definição contábil que fundamenta e descreve o balanço patrimonial é a seguinte:<br>Ativos = Passivos + Patrimônio liquido<br>Considere as informações apresentadas a seguir sobre a sociedade empresária XPTO no ano de 20XX.<br>Empresa XPTO 20XX	 <br>Caixa e equivalentes	150<br>Fornecedores	150<br>Empréstimos	200<br>Ações Ordinárias	100<br>Reservas de Capital	250<br>Contas a receber	600<br>Estoques	250<br>Bens, imóveis, fábricas e equipamentos	1500<br>Dívidas de longo prazo	500<br>Ações preferenciais	200<br>Ativos intangíveis e outros	300<br>Despesas a pagar	50<br>Impostos diferidos	300<br>Reserva de lucros	400<br>Depreciação acumulada	800<br>Ações em tesouraria	150<br>No período apresentado, os valores do Ativo Não-Circulante, do Passivo Circulante e do Patrimônio Líquido são, respectivamente,<br>a)  1000, 400 e 950.<br>b)  2300, 700 e 950.<br>c)  1000, 400 e 800.<br>d)  700, 700 e 950.<br>e)  700, 700 e 800.</div>
 </section>
 
-
+  <section class="gabarito">
+    <h2>GABARITO</h2>
+    <table>
+      <thead><tr><th>Questão</th><th>Resposta</th></tr></thead>
+      <tbody><tr><td>Questão 01</td><td>A</td></tr>
+<tr><td>Questão 02</td><td>D</td></tr>
+<tr><td>Questão 03</td><td>E</td></tr>
+<tr><td>Questão 04</td><td>A</td></tr>
+<tr><td>Questão 05</td><td>B</td></tr>
+<tr><td>Questão 06</td><td>C</td></tr>
+<tr><td>Questão 07</td><td>D</td></tr>
+<tr><td>Questão 08</td><td>D</td></tr>
+<tr><td>Questão 09</td><td>A</td></tr>
+<tr><td>Questão 10</td><td>D</td></tr>
+<tr><td>Questão 11</td><td>E</td></tr>
+<tr><td>Questão 12</td><td>C</td></tr>
+<tr><td>Questão 13</td><td>D</td></tr>
+<tr><td>Questão 14</td><td>D</td></tr>
+<tr><td>Questão 15</td><td>B</td></tr>
+<tr><td>Questão 16</td><td>C</td></tr>
+<tr><td>Questão 17</td><td>D</td></tr>
+<tr><td>Questão 18</td><td>C</td></tr>
+<tr><td>Questão 19</td><td>A</td></tr>
+<tr><td>Questão 20</td><td>C</td></tr>
+<tr><td>Questão 21</td><td>B</td></tr>
+<tr><td>Questão 22</td><td>D</td></tr>
+<tr><td>Questão 23</td><td>A</td></tr>
+<tr><td>Questão 24</td><td>E</td></tr>
+<tr><td>Questão 25</td><td>D</td></tr>
+<tr><td>Questão 26</td><td>B</td></tr>
+<tr><td>Questão 27</td><td>B</td></tr>
+<tr><td>Questão 28</td><td>B</td></tr>
+<tr><td>Questão 29</td><td>E</td></tr>
+<tr><td>Questão 30</td><td>C</td></tr>
+<tr><td>Questão 31</td><td>A</td></tr>
+<tr><td>Questão 32</td><td>C</td></tr>
+<tr><td>Questão 33</td><td>D</td></tr>
+<tr><td>Questão 34</td><td>A</td></tr>
+<tr><td>Questão 35</td><td>C</td></tr>
+<tr><td>Questão 36</td><td>D</td></tr>
+<tr><td>Questão 37</td><td>E</td></tr>
+<tr><td>Questão 38</td><td>C</td></tr></tbody>
+    </table>
+  </section>
   <div class="print-box">
     <button onclick="window.print()">🖨️ Imprimir / Salvar em PDF</button>
   </div>
 </main>
-
 <footer class="rodape">
   Curso de Contabilidade Professor Moreira • WhatsApp (61) 98532-3574
 </footer>
